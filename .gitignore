@@ -65,3 +65,6 @@ crashlytics-build.properties
 
 # Plastic SCM / Unity Version Control
 .plastic/
+
+*.pfx
+*.p12

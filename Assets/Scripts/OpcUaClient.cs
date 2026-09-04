@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class CraneOpcUaBridge : MonoBehaviour
+public class OpcUaClient : MonoBehaviour
 {
     public CraneController craneController;
 
@@ -8,7 +8,12 @@ public class CraneOpcUaBridge : MonoBehaviour
     private float boomAngle;
     private float telescopeExtension;
 
-    // Unity automatically calls update once per frame
+    void Start()
+    {
+        // Koble til OPC UA-server
+        // Subscribe på nodene
+    }
+
     void Update()
     {
         craneController.slewAngle = slewAngle;
@@ -16,17 +21,17 @@ public class CraneOpcUaBridge : MonoBehaviour
         craneController.telescopeExtension = telescopeExtension;
     }
 
-    public void SetSlewAngle(float value)
+    public void OnSlewAngleChanged(float value)
     {
         slewAngle = value;
     }
 
-    public void SetBoomAngle(float value)
+    public void OnBoomAngleChanged(float value)
     {
         boomAngle = value;
     }
 
-    public void SetTelescopeExtension(float value)
+    public void OnTelescopeExtensionChanged(float value)
     {
         telescopeExtension = value;
     }

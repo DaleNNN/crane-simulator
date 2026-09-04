@@ -242,6 +242,13 @@
       },
       "url": "https://packages.unity.com"
     },
+    "org.opc-foundation.ua.net-standard": {
+      "version": "https://github.com/e-s-unity/org.opc-foundation.ua.net-standard.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "d229604adefe0585db11a1ab4c267069e8576daa"
+    },
     "com.unity.modules.accessibility": {
       "version": "1.0.0",
       "depth": 0,

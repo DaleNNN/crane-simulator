@@ -1,0 +1,3 @@
+# OPC UA-stack for testserveren.
+# 1.0 er foerste versjon med write_value/read_value-navnene som server.py bruker.
+asyncua>=1.0

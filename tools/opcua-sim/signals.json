@@ -1,0 +1,200 @@
+{
+  "_comment": [
+    "Signalkontrakt mellom reguleringsprogrammet (CDP) og simulatoren (Unity).",
+    "Dette er den delte fasiten. Server.py bygger hele adresserommet fra denne fila,",
+    "og CDP-siden skal ha de samme nodene med de samme navnene og enhetene.",
+    "",
+    "NodeId blir ns=1;s=<path> - altsaa nøyaktig strengen i 'path'.",
+    "direction: toUnity   = CDP eier verdien, Unity abonnerer.",
+    "           fromUnity = simulatoren eier verdien, Unity skriver, CDP abonnerer.",
+    "",
+    "Aa legge til en node er en rad her. Ingen kodeendring."
+  ],
+
+  "namespaceUri": "urn:crane-simulator:cdp",
+
+  "signals": [
+    {
+      "path": "Crane.SlewAngle",
+      "type": "Double",
+      "unit": "deg",
+      "direction": "toUnity",
+      "initial": 0,
+      "range": [-180, 180],
+      "driver": { "kind": "sine", "amplitude": 90, "period": 24 },
+      "description": "Svingvinkel. Nullpunkt og positiv retning MAA avklares med CDP-siden."
+    },
+    {
+      "path": "Crane.BoomAngle",
+      "type": "Double",
+      "unit": "deg",
+      "direction": "toUnity",
+      "initial": 0,
+      "range": [-10, 80],
+      "driver": { "kind": "sine", "amplitude": 30, "period": 5 },
+      "description": "Bomvinkel. Samme driver som Sine-komponenten i CDP-prosjektet (30 @ 0.2 Hz)."
+    },
+    {
+      "path": "Crane.TelescopeExtension",
+      "type": "Double",
+      "unit": "m",
+      "direction": "toUnity",
+      "initial": 0,
+      "range": [0, 12],
+      "driver": { "kind": "triangle", "min": 0, "max": 8, "period": 18 },
+      "description": "Utskyv av teleskopseksjon fra innkjørt stilling."
+    },
+    {
+      "path": "Crane.WinchPayout",
+      "type": "Double",
+      "unit": "m",
+      "direction": "toUnity",
+      "initial": 5,
+      "range": [0, 60],
+      "driver": { "kind": "triangle", "min": 2, "max": 20, "period": 30 },
+      "description": "Utfiret wire fra bomtupp til krok."
+    },
+
+    {
+      "path": "Vessel.Surge",
+      "type": "Double",
+      "unit": "m",
+      "direction": "toUnity",
+      "initial": 0,
+      "driver": { "kind": "sine", "amplitude": 0.4, "period": 13, "phase": 40 },
+      "description": "Fartøy forover/akter. Positiv mot baug."
+    },
+    {
+      "path": "Vessel.Sway",
+      "type": "Double",
+      "unit": "m",
+      "direction": "toUnity",
+      "initial": 0,
+      "driver": { "kind": "sine", "amplitude": 0.3, "period": 17, "phase": 110 },
+      "description": "Fartøy sideveis. Positiv mot styrbord."
+    },
+    {
+      "path": "Vessel.Heave",
+      "type": "Double",
+      "unit": "m",
+      "direction": "toUnity",
+      "initial": 0,
+      "driver": { "kind": "sine", "amplitude": 0.8, "period": 8 },
+      "description": "Fartøy opp/ned. Samme amplitude og periode som VesselTestDriver i Unity."
+    },
+    {
+      "path": "Vessel.Roll",
+      "type": "Double",
+      "unit": "deg",
+      "direction": "toUnity",
+      "initial": 0,
+      "driver": { "kind": "sine", "amplitude": 3, "period": 11 },
+      "description": "Rull om lengdeaksen."
+    },
+    {
+      "path": "Vessel.Pitch",
+      "type": "Double",
+      "unit": "deg",
+      "direction": "toUnity",
+      "initial": 0,
+      "driver": { "kind": "sine", "amplitude": 2, "period": 7 },
+      "description": "Stamp om tverraksen."
+    },
+    {
+      "path": "Vessel.Yaw",
+      "type": "Double",
+      "unit": "deg",
+      "direction": "toUnity",
+      "initial": 0,
+      "driver": { "kind": "sine", "amplitude": 1.5, "period": 29 },
+      "description": "Gir om vertikalaksen."
+    },
+
+    {
+      "path": "Crane.Tip.X",
+      "type": "Double",
+      "unit": "m",
+      "direction": "fromUnity",
+      "initial": 0,
+      "description": "Bomtupp i fartøyets koordinatsystem."
+    },
+    {
+      "path": "Crane.Tip.Y",
+      "type": "Double",
+      "unit": "m",
+      "direction": "fromUnity",
+      "initial": 0,
+      "description": "Bomtupp i fartøyets koordinatsystem."
+    },
+    {
+      "path": "Crane.Tip.Z",
+      "type": "Double",
+      "unit": "m",
+      "direction": "fromUnity",
+      "initial": 0,
+      "description": "Bomtupp i fartøyets koordinatsystem."
+    },
+    {
+      "path": "Crane.Hook.X",
+      "type": "Double",
+      "unit": "m",
+      "direction": "fromUnity",
+      "initial": 0,
+      "description": "Krokposisjon i verdenskoordinater."
+    },
+    {
+      "path": "Crane.Hook.Y",
+      "type": "Double",
+      "unit": "m",
+      "direction": "fromUnity",
+      "initial": 0,
+      "description": "Krokposisjon i verdenskoordinater."
+    },
+    {
+      "path": "Crane.Hook.Z",
+      "type": "Double",
+      "unit": "m",
+      "direction": "fromUnity",
+      "initial": 0,
+      "description": "Krokposisjon i verdenskoordinater."
+    },
+    {
+      "path": "Crane.WireTension",
+      "type": "Double",
+      "unit": "kN",
+      "direction": "fromUnity",
+      "initial": 0,
+      "description": "Beregnet wirestrekk fra simulatoren."
+    },
+    {
+      "path": "Crane.SlewLimitReached",
+      "type": "Boolean",
+      "direction": "fromUnity",
+      "initial": false,
+      "description": "Simulatoren har naadd en mekanisk endestopp i sving."
+    },
+    {
+      "path": "Crane.Collision",
+      "type": "Boolean",
+      "direction": "fromUnity",
+      "initial": false,
+      "description": "Kollisjon oppdaget mellom kran og fartøy/last."
+    },
+
+    {
+      "path": "Sim.Heartbeat",
+      "type": "UInt32",
+      "unit": "count",
+      "direction": "fromUnity",
+      "initial": 0,
+      "description": "Teller opp hver frame i Unity. Staar den stille, henger eller er simulatoren nede."
+    },
+    {
+      "path": "Sim.Ready",
+      "type": "Boolean",
+      "direction": "fromUnity",
+      "initial": false,
+      "description": "Simulatoren er lastet og klar til aa foelge settpunkter."
+    }
+  ]
+}

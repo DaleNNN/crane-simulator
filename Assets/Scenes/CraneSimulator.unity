@@ -602,7 +602,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &943011834
 Transform:
   m_ObjectHideFlags: 0
@@ -631,12 +631,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CraneOpcClient
   serverUrl: opc.tcp://192.168.172.242:4840
-  certPath: C:\Users\oyste\UnityCraneClient.pfx
+  certFileName: UnityCraneClient.pfx
   certPassword: unityopcua
   slewNode: Crane.SlewAngle
   boomNode: Crane.BoomAngle
   telescopeNode: Crane.TelescopeExtension
-  crane: {fileID: 0}
+  crane: {fileID: 748766593}
   publishingIntervalMs: 50
 --- !u!1 &1333085083
 GameObject:
@@ -957,7 +957,7 @@ Transform:
   m_GameObject: {fileID: 1692155156}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 4}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 0.6, y: 0.6, z: 8}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1183,7 +1183,7 @@ Transform:
   m_GameObject: {fileID: 2069257281}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 8}
+  m_LocalPosition: {x: 0, y: 0, z: 4}
   m_LocalScale: {x: 0.4, y: 0.4, z: 4}
   m_ConstrainProportionsScale: 0
   m_Children: []

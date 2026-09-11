@@ -1,5 +1,7 @@
 using System;
+using System.IO;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Threading;
 using System.Threading.Tasks;
 using UnityEngine;
@@ -11,8 +13,8 @@ public class CraneOpcClient : MonoBehaviour
     [Header("Server")]
     [SerializeField] string serverUrl = "opc.tcp://192.168.172.242:4840";
 
-    [Header("Sertifikat")]
-    [SerializeField] string certPath = @"C:\Users\oyste\UnityCraneClient.pfx";
+    [Header("Sertifikat (ligger i Assets/StreamingAssets)")]
+    [SerializeField] string certFileName = "UnityCraneClient.pfx";
     [SerializeField] string certPassword = "unityopcua";
 
     [Header("Node-ID-er (ns=1)")]
@@ -24,14 +26,20 @@ public class CraneOpcClient : MonoBehaviour
     [SerializeField] CraneController crane;
     [SerializeField] int publishingIntervalMs = 50;
 
-    // Settes fra OPC-tråden, leses i Update()
+    // Settes fra OPC-traden, leses i Update()
     volatile float slew, boom, telescope;
     volatile bool connected;
 
     Session session;
 
+    // Unity-API kan ikke kalles fra bakgrunnstrad, sa stien caches her
+    string certFullPath;
+
     void Start()
     {
+        certFullPath = Path.Combine(Application.streamingAssetsPath, certFileName);
+        Debug.Log("Sertifikatsti: " + certFullPath);
+
         Task.Run(async () =>
         {
             SynchronizationContext.SetSynchronizationContext(null);
@@ -51,16 +59,25 @@ public class CraneOpcClient : MonoBehaviour
 
     async Task Connect()
     {
-        var cert = new System.Security.Cryptography.X509Certificates.X509Certificate2(
-            certPath, certPassword,
-            System.Security.Cryptography.X509Certificates.X509KeyStorageFlags.Exportable |
-            System.Security.Cryptography.X509Certificates.X509KeyStorageFlags.PersistKeySet);
+        if (!File.Exists(certFullPath))
+        {
+            Debug.LogError("Fant ikke sertifikat: " + certFullPath);
+            return;
+        }
+
+        var cert = new X509Certificate2(
+            certFullPath,
+            certPassword,
+            X509KeyStorageFlags.Exportable | X509KeyStorageFlags.PersistKeySet);
+
+        Debug.Log("Sertifikat lastet. HasPrivateKey = " + cert.HasPrivateKey);
 
         var config = new ApplicationConfiguration
         {
             ApplicationName = "UnityCraneClient",
-            ApplicationUri = "urn:localhost:UnityCraneClient",
+            ApplicationUri = "urn:UnityCraneClient",
             ApplicationType = ApplicationType.Client,
+
             SecurityConfiguration = new SecurityConfiguration
             {
                 ApplicationCertificate = new CertificateIdentifier { Certificate = cert },
@@ -71,6 +88,7 @@ public class CraneOpcClient : MonoBehaviour
                 TrustedIssuerCertificates = new CertificateTrustList(),
                 RejectedCertificateStore = new CertificateTrustList()
             },
+
             TransportConfigurations = new TransportConfigurationCollection(),
             TransportQuotas = new TransportQuotas { OperationTimeout = 15000 },
             ClientConfiguration = new ClientConfiguration { DefaultSessionTimeout = 60000 },
@@ -80,6 +98,7 @@ public class CraneOpcClient : MonoBehaviour
         await config.Validate(ApplicationType.Client);
         config.CertificateValidator.AutoAcceptUntrustedCertificates = true;
 
+        // --- Discovery ---
         var endpointConfig = EndpointConfiguration.Create(config);
         EndpointDescription endpoint;
 
@@ -89,6 +108,7 @@ public class CraneOpcClient : MonoBehaviour
                          .First(e => e.SecurityMode == MessageSecurityMode.None);
         }
 
+        // --- Sesjon ---
         session = await Session.Create(
             config, new ConfiguredEndpoint(null, endpoint, endpointConfig),
             false, "UnityCraneSession", 60000,
@@ -96,6 +116,7 @@ public class CraneOpcClient : MonoBehaviour
 
         Debug.Log("OPC UA tilkoblet: " + endpoint.EndpointUrl);
 
+        // --- Abonnement ---
         var subscription = new Subscription(session.DefaultSubscription)
         {
             PublishingInterval = publishingIntervalMs
@@ -109,7 +130,7 @@ public class CraneOpcClient : MonoBehaviour
         subscription.Create();
 
         connected = true;
-        Debug.Log("Abonnerer på kranverdier.");
+        Debug.Log("Abonnerer pa kranverdier.");
     }
 
     MonitoredItem MakeItem(string identifier, Action<float> setter)

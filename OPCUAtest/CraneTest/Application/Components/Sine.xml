@@ -1,0 +1,26 @@
+<Component Model="Sine" Name="Sine" src="Components/Sine.xml" Description="Sinus generator. Generates the signal: Output = Offset + Amplitude * sin ( 2*PI*Frequency*Time ).">
+  <SchedulingOrder>TopDown</SchedulingOrder>
+  <SchedulingGroup>Default</SchedulingGroup>
+  <Priority>high</Priority>
+  <fs>100</fs>
+  <Status>0</Status>
+
+  <Signals>
+    <Signal Description="Process run time each s." Input="0" Model="CDPSignal&lt;double&gt;" Name="Process Timer" Type="double" Unit="s/s"></Signal>
+    <Signal Description="Process interval [s]." Input="0" Model="CDPSignal&lt;double&gt;" Name="Process Period" Type="double" Unit="s"></Signal>
+    <Signal Description="Time [s]" Input="0" Model="CDPSignal&lt;double&gt;" Name="Time" Type="double"></Signal>
+    <Signal Description="Sinus output" Input="0" Model="CDPSignal&lt;double&gt;" Name="Output" Type="double"></Signal>
+  </Signals>
+
+  <Alarms>
+    <Alarm Description="A component was suspended!" Name="Component Suspended" Text="Component was suspended!"></Alarm>
+    <Alarm Description="Alarm is triggered (with Text containing the list of errors) when some node of the component (like operator) has configuration fault." Level="Error" Name="ConfigurationFaults"></Alarm>
+  </Alarms>
+
+  <Parameters>
+    <Parameter Description="Amplitude" Name="Amplitude" Value="30"></Parameter>
+    <Parameter Description="Frequency [Hz]" Name="Frequency" Value="0.2000000000000000111"></Parameter>
+    <Parameter Description="Offset" Name="Offset"></Parameter>
+    <Parameter Description="Use realtime as time-input (m_t is then updated with globalTime). Default, m_t is updated by m_Timer." Name="UseRealTime" Value="1"></Parameter>
+  </Parameters>
+</Component>

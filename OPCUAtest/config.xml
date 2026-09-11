@@ -1,0 +1,995 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ProjectConfiguration>
+<qtcreator>
+ <data>
+  <variable>Block Diagram</variable>
+  <valuelist type="QVariantList">
+   <valuemap type="QVariantMap">
+    <valuemap type="QVariantMap" key="data">
+     <valuelist type="QVariantList" key="nodes">
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">CraneTestNodeType.ComponentDataType.InternalDataDirection.TwoWay</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">200</value>
+        <value type="qlonglong" key="y">100</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">CraneTest.SineNodeType.ComponentDataType.InternalDataDirection.TwoWay</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">0</value>
+        <value type="qlonglong" key="y">507</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">CraneTest.OPC-UA-Server.Crane.BoomAngleNodeType.LabelDataType.ExternalDataDirection.Sink</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">800</value>
+        <value type="double" key="y">83.33333333333334</value>
+       </valuemap>
+      </valuemap>
+     </valuelist>
+     <valuemap type="QVariantMap" key="settings">
+      <valuelist type="QVariantList" key="BlockDiagram/ViewMatrix">
+       <value type="double">0.457175925925926</value>
+       <value type="qlonglong">0</value>
+       <value type="qlonglong">0</value>
+       <value type="qlonglong">0</value>
+       <value type="double">0.457175925925926</value>
+       <value type="qlonglong">0</value>
+       <value type="qlonglong">0</value>
+       <value type="qlonglong">0</value>
+       <value type="qlonglong">1</value>
+      </valuelist>
+      <valuelist type="QVariantList" key="BlockDiagram/ViewRect">
+       <value type="qlonglong">-639</value>
+       <value type="qlonglong">-212</value>
+       <value type="qlonglong">1293</value>
+       <value type="qlonglong">857</value>
+      </valuelist>
+      <value type="bool" key="autoLayoutEnabled">true</value>
+     </valuemap>
+    </valuemap>
+    <value type="QString" key="id"></value>
+   </valuemap>
+   <valuemap type="QVariantMap">
+    <valuemap type="QVariantMap" key="data">
+     <valuelist type="QVariantList" key="names"/>
+    </valuemap>
+    <value type="QString" key="id">PinnedNodes</value>
+   </valuemap>
+   <valuemap type="QVariantMap">
+    <valuemap type="QVariantMap" key="data">
+     <value type="bool" key="isDependenciesFilterActive">false</value>
+     <value type="bool" key="isGuiConnectionsFilterActive">false</value>
+     <value type="bool" key="isInheritedFilterActive">false</value>
+     <value type="bool" key="isInternalFilterActive">true</value>
+     <value type="bool" key="isLoggerConnectionsFilterActive">false</value>
+     <value type="bool" key="isParametersHiddenFilterActive">false</value>
+     <value type="bool" key="isPassThroughConnectionsHiddenFilterActive">true</value>
+     <value type="bool" key="isPropertiesHiddenFilterActive">true</value>
+     <value type="bool" key="isRoutingFilterActive">false</value>
+     <value type="bool" key="isValueNodesHiddenFilterActive">false</value>
+    </valuemap>
+    <value type="QString" key="id">FilterState</value>
+   </valuemap>
+   <valuemap type="QVariantMap">
+    <valuemap type="QVariantMap" key="data">
+     <valuelist type="QVariantList" key="nodes"/>
+     <valuemap type="QVariantMap" key="settings">
+      <valuelist type="QVariantList" key="BlockDiagram/ViewMatrix">
+       <value type="double">0.76125</value>
+       <value type="qlonglong">0</value>
+       <value type="qlonglong">0</value>
+       <value type="qlonglong">0</value>
+       <value type="double">0.76125</value>
+       <value type="qlonglong">0</value>
+       <value type="qlonglong">0</value>
+       <value type="qlonglong">0</value>
+       <value type="qlonglong">1</value>
+      </valuelist>
+      <valuelist type="QVariantList" key="BlockDiagram/ViewRect">
+       <value type="qlonglong">-401</value>
+       <value type="qlonglong">-399</value>
+       <value type="qlonglong">805</value>
+       <value type="qlonglong">802</value>
+      </valuelist>
+      <value type="bool" key="autoLayoutEnabled">true</value>
+     </valuemap>
+    </valuemap>
+    <value type="QString" key="id">SineOPCUAtestApp.OPC-UA-Server.SineObject</value>
+   </valuemap>
+   <valuemap type="QVariantMap">
+    <valuemap type="QVariantMap" key="data">
+     <valuelist type="QVariantList" key="nodes">
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">SineOPCUAtestApp.SineNodeType.ComponentDataType.InternalDataDirection.TwoWay</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="double" key="x">308.6666666666667</value>
+        <value type="qlonglong" key="y">507</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">SineOPCUAtestApp.OPC-UA-Server.Send-Receive Roundtrip timeNodeType.ComponentDataType.InternalDataDirection.Sink</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">800</value>
+        <value type="qlonglong" key="y">50</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">SineOPCUAtestApp.OPC-UA-Server.NumberOfNodesOnlineNodeType.ComponentDataType.InternalDataDirection.Sink</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">800</value>
+        <value type="qlonglong" key="y">89</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">SineOPCUAtestApp.OPC-UA-Server.NumberOfNodesNodeType.ComponentDataType.InternalDataDirection.Sink</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">800</value>
+        <value type="qlonglong" key="y">128</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">SineOPCUAtestApp.OPC-UA-Server.SignalTimeoutNodeType.ComponentDataType.InternalDataDirection.Source</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">-183</value>
+        <value type="qlonglong" key="y">50</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">SineOPCUAtestApp.OPC-UA-Server.SignalTimeoutTimerNodeType.ComponentDataType.InternalDataDirection.TwoWay</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">0</value>
+        <value type="qlonglong" key="y">507</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">SineOPCUAtestApp.OPC-UA-Server.SineObjectNodeType.ComponentDataType.InternalDataDirection.TwoWay</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="double" key="x">309.9822112753147</value>
+        <value type="double" key="y">105.86571793468346</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">SineOPCUAtestApp.OPC-UA-Server.ServerObjectNode1NodeType.ComponentDataType.InternalDataDirection.TwoWay</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="double" key="x">538.3333333333334</value>
+        <value type="qlonglong" key="y">423</value>
+       </valuemap>
+      </valuemap>
+     </valuelist>
+     <valuemap type="QVariantMap" key="settings">
+      <valuelist type="QVariantList" key="BlockDiagram/ViewMatrix">
+       <value type="double">0.6819284603421462</value>
+       <value type="qlonglong">0</value>
+       <value type="qlonglong">0</value>
+       <value type="qlonglong">0</value>
+       <value type="double">0.6819284603421462</value>
+       <value type="qlonglong">0</value>
+       <value type="qlonglong">0</value>
+       <value type="qlonglong">0</value>
+       <value type="qlonglong">1</value>
+      </valuelist>
+      <valuelist type="QVariantList" key="BlockDiagram/ViewRect">
+       <value type="qlonglong">101</value>
+       <value type="qlonglong">-100</value>
+       <value type="qlonglong">823</value>
+       <value type="qlonglong">896</value>
+      </valuelist>
+      <value type="bool" key="autoLayoutEnabled">false</value>
+     </valuemap>
+    </valuemap>
+    <value type="QString" key="id">SineOPCUAtestApp.OPC-UA-Server</value>
+   </valuemap>
+   <valuemap type="QVariantMap">
+    <valuemap type="QVariantMap" key="data">
+     <valuelist type="QVariantList" key="nodes">
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">SineOPCUAtestApp.CDP.CDPEngineNodeType.ComponentDataType.InternalDataDirection.TwoWay</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">0</value>
+        <value type="qlonglong" key="y">200</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">SineOPCUAtestApp.CDP.MessengerNodeType.ComponentDataType.InternalDataDirection.TwoWay</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">0</value>
+        <value type="double" key="y">373.6666666666667</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">SineOPCUAtestApp.CDP.MessengerIOServerNodeType.ComponentDataType.InternalDataDirection.TwoWay</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">0</value>
+        <value type="double" key="y">755.3333333333334</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">SineOPCUAtestApp.CDP.EthernetManagerNodeType.ComponentDataType.InternalDataDirection.TwoWay</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">0</value>
+        <value type="qlonglong" key="y">1007</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">SineOPCUAtestApp.CDP.CDPEventNodeNodeType.ComponentDataType.InternalDataDirection.TwoWay</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">0</value>
+        <value type="double" key="y">1622.6666666666665</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">SineOPCUAtestApp.CDP.CDPEventSubscriberNodeType.ComponentDataType.InternalDataDirection.TwoWay</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">0</value>
+        <value type="double" key="y">1926.3333333333333</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">SineOPCUAtestApp.CDP.RoutingTrackerNodeType.ComponentDataType.InternalDataDirection.TwoWay</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">0</value>
+        <value type="qlonglong" key="y">2282</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">SineOPCUAtestApp.CDP.StudioAPIServerNodeType.ComponentDataType.InternalDataDirection.TwoWay</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">0</value>
+        <value type="double" key="y">2442.6666666666665</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">SineOPCUAtestApp.CDP.SecurityNodeType.ComponentDataType.InternalDataDirection.TwoWay</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">0</value>
+        <value type="double" key="y">2603.333333333333</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">SineOPCUAtestApp.CDP.ExternalTypesProviderNodeType.ComponentDataType.InternalDataDirection.TwoWay</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">0</value>
+        <value type="double" key="y">2763.9999999999995</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">SineOPCUAtestApp.CDP.TagTrackerNodeType.ComponentDataType.InternalDataDirection.TwoWay</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">0</value>
+        <value type="double" key="y">2924.666666666666</value>
+       </valuemap>
+      </valuemap>
+     </valuelist>
+     <valuemap type="QVariantMap" key="settings">
+      <valuelist type="QVariantList" key="BlockDiagram/ViewMatrix">
+       <value type="double">0.21535004730368973</value>
+       <value type="qlonglong">0</value>
+       <value type="qlonglong">0</value>
+       <value type="qlonglong">0</value>
+       <value type="double">0.21535004730368973</value>
+       <value type="qlonglong">0</value>
+       <value type="qlonglong">0</value>
+       <value type="qlonglong">0</value>
+       <value type="qlonglong">1</value>
+      </valuelist>
+      <valuelist type="QVariantList" key="BlockDiagram/ViewRect">
+       <value type="qlonglong">-1152</value>
+       <value type="qlonglong">158</value>
+       <value type="qlonglong">2847</value>
+       <value type="qlonglong">2837</value>
+      </valuelist>
+      <value type="bool" key="autoLayoutEnabled">true</value>
+     </valuemap>
+    </valuemap>
+    <value type="QString" key="id">SineOPCUAtestApp.CDP</value>
+   </valuemap>
+   <valuemap type="QVariantMap">
+    <valuemap type="QVariantMap" key="data">
+     <valuelist type="QVariantList" key="nodes">
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">SineOPCUAtestApp.Sine.TimeNodeType.ComponentDataType.InternalDataDirection.Sink</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">800</value>
+        <value type="qlonglong" key="y">50</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">SineOPCUAtestApp.Sine.OutputNodeType.ComponentDataType.InternalDataDirection.Sink</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">800</value>
+        <value type="qlonglong" key="y">89</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">SineOPCUAtestApp.Sine.AmplitudeNodeType.ComponentDataType.InternalDataDirection.Source</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">-149</value>
+        <value type="qlonglong" key="y">50</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">SineOPCUAtestApp.Sine.FrequencyNodeType.ComponentDataType.InternalDataDirection.Source</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">-153</value>
+        <value type="qlonglong" key="y">89</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">SineOPCUAtestApp.Sine.OffsetNodeType.ComponentDataType.InternalDataDirection.Source</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">-117</value>
+        <value type="qlonglong" key="y">128</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">SineOPCUAtestApp.Sine.UseRealTimeNodeType.ComponentDataType.InternalDataDirection.Source</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">-176</value>
+        <value type="qlonglong" key="y">167</value>
+       </valuemap>
+      </valuemap>
+     </valuelist>
+     <valuemap type="QVariantMap" key="settings">
+      <valuelist type="QVariantList" key="BlockDiagram/ViewMatrix">
+       <value type="double">0.5068243858052776</value>
+       <value type="qlonglong">0</value>
+       <value type="qlonglong">0</value>
+       <value type="qlonglong">0</value>
+       <value type="double">0.5068243858052776</value>
+       <value type="qlonglong">0</value>
+       <value type="qlonglong">0</value>
+       <value type="qlonglong">0</value>
+       <value type="qlonglong">1</value>
+      </valuelist>
+      <valuelist type="QVariantList" key="BlockDiagram/ViewRect">
+       <value type="qlonglong">-211</value>
+       <value type="qlonglong">-479</value>
+       <value type="qlonglong">1107</value>
+       <value type="qlonglong">1205</value>
+      </valuelist>
+      <value type="bool" key="autoLayoutEnabled">true</value>
+     </valuemap>
+    </valuemap>
+    <value type="QString" key="id">SineOPCUAtestApp.Sine</value>
+   </valuemap>
+   <valuemap type="QVariantMap">
+    <valuemap type="QVariantMap" key="data">
+     <valuelist type="QVariantList" key="nodes">
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">CraneTest.CPULoadNodeType.ComponentDataType.InternalDataDirection.Source</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">-146</value>
+        <value type="qlonglong" key="y">167</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">CraneTest.MemUsedRelativeNodeType.ComponentDataType.InternalDataDirection.Source</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">-215</value>
+        <value type="qlonglong" key="y">206</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">CraneTest.SafeToStartNodeType.ComponentDataType.InternalDataDirection.Sink</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">800</value>
+        <value type="qlonglong" key="y">50</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">CraneTest.BootupDoneNodeType.ComponentDataType.InternalDataDirection.Source</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">-168</value>
+        <value type="qlonglong" key="y">128</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">CraneTest.MaxConfigurationSaveDelayNodeType.ComponentDataType.InternalDataDirection.Source</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">-296</value>
+        <value type="qlonglong" key="y">89</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">CraneTest.StartupOverrideTimeNodeType.ComponentDataType.InternalDataDirection.Source</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">-235</value>
+        <value type="qlonglong" key="y">50</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">CraneTest.OPC-UA-ServerNodeType.ComponentDataType.InternalDataDirection.TwoWay</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="double" key="x">254.0087719298245</value>
+        <value type="double" key="y">361.1543859649122</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">CraneTest.ASinNodeType.ComponentDataType.InternalDataDirection.TwoWay</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="double" key="x">154.61403508771923</value>
+        <value type="double" key="y">92.76842105263154</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">CraneTest.SineNodeType.ComponentDataType.InternalDataDirection.TwoWay</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="double" key="x">450.58947368421036</value>
+        <value type="double" key="y">161.24035087719295</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">CraneTest.OPC-UA-Server.Crane.BoomAngleNodeType.LabelDataType.ExternalDataDirection.Sink</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="double" key="x">-68.47192982456139</value>
+        <value type="double" key="y">-196.58070175438593</value>
+       </valuemap>
+      </valuemap>
+     </valuelist>
+     <valuemap type="QVariantMap" key="settings">
+      <valuelist type="QVariantList" key="BlockDiagram/ViewMatrix">
+       <value type="double">0.45274027005559975</value>
+       <value type="qlonglong">0</value>
+       <value type="qlonglong">0</value>
+       <value type="qlonglong">0</value>
+       <value type="double">0.45274027005559975</value>
+       <value type="qlonglong">0</value>
+       <value type="qlonglong">0</value>
+       <value type="qlonglong">0</value>
+       <value type="qlonglong">1</value>
+      </valuelist>
+      <valuelist type="QVariantList" key="BlockDiagram/ViewRect">
+       <value type="qlonglong">-287</value>
+       <value type="qlonglong">-157</value>
+       <value type="qlonglong">1206</value>
+       <value type="qlonglong">866</value>
+      </valuelist>
+      <value type="bool" key="autoLayoutEnabled">false</value>
+     </valuemap>
+    </valuemap>
+    <value type="QString" key="id">CraneTest</value>
+   </valuemap>
+   <valuemap type="QVariantMap">
+    <valuemap type="QVariantMap" key="data">
+     <valuelist type="QVariantList" key="nodes">
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">CraneTest.OPC-UA-Server.Send-Receive Roundtrip timeNodeType.ComponentDataType.InternalDataDirection.Sink</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">800</value>
+        <value type="qlonglong" key="y">50</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">CraneTest.OPC-UA-Server.NumberOfNodesOnlineNodeType.ComponentDataType.InternalDataDirection.Sink</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">800</value>
+        <value type="qlonglong" key="y">128</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">CraneTest.OPC-UA-Server.NumberOfNodesNodeType.ComponentDataType.InternalDataDirection.Sink</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">800</value>
+        <value type="qlonglong" key="y">89</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">CraneTest.OPC-UA-Server.SignalTimeoutNodeType.ComponentDataType.InternalDataDirection.Source</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">-183</value>
+        <value type="qlonglong" key="y">50</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">CraneTest.OPC-UA-Server.SignalTimeoutTimerNodeType.ComponentDataType.InternalDataDirection.TwoWay</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="double" key="x">-218.41941074523405</value>
+        <value type="double" key="y">291.5025996533796</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">CraneTest.OPC-UA-Server.CraneFunctionsNodeType.ComponentDataType.InternalDataDirection.Sink</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">800</value>
+        <value type="qlonglong" key="y">245</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">CraneTest.OPC-UA-Server.CraneFunctions1NodeType.ComponentDataType.InternalDataDirection.Sink</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">800</value>
+        <value type="qlonglong" key="y">167</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">CraneTest.OPC-UA-Server.CraneFunctions2NodeType.ComponentDataType.InternalDataDirection.Sink</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">800</value>
+        <value type="qlonglong" key="y">245</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">CraneTest.OPC-UA-Server.SetNodeType.ComponentDataType.InternalDataDirection.Sink</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">800</value>
+        <value type="qlonglong" key="y">245</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">CraneTest.OPC-UA-Server.SetSlewAngleNodeType.ComponentDataType.InternalDataDirection.Sink</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">800</value>
+        <value type="qlonglong" key="y">50</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">CraneTest.OPC-UA-Server.SetBoomAngleNodeType.ComponentDataType.InternalDataDirection.Sink</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">800</value>
+        <value type="qlonglong" key="y">128</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">CraneTest.OPC-UA-Server.SetTelescopeExtensionNodeType.ComponentDataType.InternalDataDirection.Sink</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">800</value>
+        <value type="qlonglong" key="y">128</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">CraneTest.OPC-UA-Server.SetSlewAngleNodeType.ComponentDataType.InternalDataDirection.Source</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">-180</value>
+        <value type="qlonglong" key="y">89</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">CraneTest.OPC-UA-Server.SetBoomAngleNodeType.ComponentDataType.InternalDataDirection.Source</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">-188</value>
+        <value type="qlonglong" key="y">128</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">CraneTest.OPC-UA-Server.SetTelescopeExtensionNodeType.ComponentDataType.InternalDataDirection.Source</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">-255</value>
+        <value type="qlonglong" key="y">167</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">CraneTest.OPC-UA-Server.ServerObjectNodeNodeType.ComponentDataType.InternalDataDirection.TwoWay</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="double" key="x">254.07972270363956</value>
+        <value type="double" key="y">423.4662045060658</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">CraneTest.OPC-UA-Server.ServerVariableNodeNodeType.ComponentDataType.InternalDataDirection.Sink</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="double" key="x">436.838821490468</value>
+        <value type="double" key="y">519.3032928942808</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">CraneTest.OPC-UA-Server.ServerVariableNode1NodeType.ComponentDataType.InternalDataDirection.Sink</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="double" key="x">456.89774696707104</value>
+        <value type="double" key="y">568.3362218370884</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">CraneTest.OPC-UA-Server.ServerVariableNode2NodeType.ComponentDataType.InternalDataDirection.Sink</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="double" key="x">483.64298093587513</value>
+        <value type="double" key="y">439.06759098786836</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">CraneTest.OPC-UA-Server.CraneNodeType.ComponentDataType.InternalDataDirection.TwoWay</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="double" key="x">307.5701906412479</value>
+        <value type="double" key="y">381.1195840554592</value>
+       </valuemap>
+      </valuemap>
+     </valuelist>
+     <valuemap type="QVariantMap" key="settings">
+      <valuelist type="QVariantList" key="BlockDiagram/ViewMatrix">
+       <value type="double">0.44867807153965783</value>
+       <value type="qlonglong">0</value>
+       <value type="qlonglong">0</value>
+       <value type="qlonglong">0</value>
+       <value type="double">0.44867807153965783</value>
+       <value type="qlonglong">0</value>
+       <value type="qlonglong">0</value>
+       <value type="qlonglong">0</value>
+       <value type="qlonglong">1</value>
+      </valuelist>
+      <valuelist type="QVariantList" key="BlockDiagram/ViewRect">
+       <value type="qlonglong">-475</value>
+       <value type="qlonglong">-109</value>
+       <value type="qlonglong">1317</value>
+       <value type="qlonglong">874</value>
+      </valuelist>
+      <value type="bool" key="autoLayoutEnabled">false</value>
+     </valuemap>
+    </valuemap>
+    <value type="QString" key="id">CraneTest.OPC-UA-Server</value>
+   </valuemap>
+   <valuemap type="QVariantMap">
+    <valuemap type="QVariantMap" key="data">
+     <valuelist type="QVariantList" key="nodes"/>
+     <valuemap type="QVariantMap" key="settings">
+      <valuelist type="QVariantList" key="BlockDiagram/ViewMatrix">
+       <value type="double">0.6583333333333333</value>
+       <value type="qlonglong">0</value>
+       <value type="qlonglong">0</value>
+       <value type="qlonglong">0</value>
+       <value type="double">0.6583333333333333</value>
+       <value type="qlonglong">0</value>
+       <value type="qlonglong">0</value>
+       <value type="qlonglong">0</value>
+       <value type="qlonglong">1</value>
+      </valuelist>
+      <valuelist type="QVariantList" key="BlockDiagram/ViewRect">
+       <value type="qlonglong">-439</value>
+       <value type="qlonglong">-301</value>
+       <value type="qlonglong">883</value>
+       <value type="qlonglong">606</value>
+      </valuelist>
+      <value type="bool" key="autoLayoutEnabled">true</value>
+     </valuemap>
+    </valuemap>
+    <value type="QString" key="id">CraneTest.OPC-UA-Server.CraneFunctions1</value>
+   </valuemap>
+   <valuemap type="QVariantMap">
+    <valuemap type="QVariantMap" key="data">
+     <valuelist type="QVariantList" key="nodes"/>
+     <valuemap type="QVariantMap" key="settings">
+      <valuelist type="QVariantList" key="BlockDiagram/ViewMatrix">
+       <value type="double">0.6583333333333333</value>
+       <value type="qlonglong">0</value>
+       <value type="qlonglong">0</value>
+       <value type="qlonglong">0</value>
+       <value type="double">0.6583333333333333</value>
+       <value type="qlonglong">0</value>
+       <value type="qlonglong">0</value>
+       <value type="qlonglong">0</value>
+       <value type="qlonglong">1</value>
+      </valuelist>
+      <valuelist type="QVariantList" key="BlockDiagram/ViewRect">
+       <value type="qlonglong">-439</value>
+       <value type="qlonglong">-301</value>
+       <value type="qlonglong">883</value>
+       <value type="qlonglong">606</value>
+      </valuelist>
+      <value type="bool" key="autoLayoutEnabled">true</value>
+     </valuemap>
+    </valuemap>
+    <value type="QString" key="id">CraneTest.OPC-UA-Server.CraneFunctions2</value>
+   </valuemap>
+   <valuemap type="QVariantMap">
+    <valuemap type="QVariantMap" key="data">
+     <valuelist type="QVariantList" key="nodes"/>
+     <valuemap type="QVariantMap" key="settings">
+      <valuelist type="QVariantList" key="BlockDiagram/ViewMatrix">
+       <value type="double">0.6583333333333333</value>
+       <value type="qlonglong">0</value>
+       <value type="qlonglong">0</value>
+       <value type="qlonglong">0</value>
+       <value type="double">0.6583333333333333</value>
+       <value type="qlonglong">0</value>
+       <value type="qlonglong">0</value>
+       <value type="qlonglong">0</value>
+       <value type="qlonglong">1</value>
+      </valuelist>
+      <valuelist type="QVariantList" key="BlockDiagram/ViewRect">
+       <value type="qlonglong">-441</value>
+       <value type="qlonglong">-302</value>
+       <value type="qlonglong">883</value>
+       <value type="qlonglong">606</value>
+      </valuelist>
+      <value type="bool" key="autoLayoutEnabled">true</value>
+     </valuemap>
+    </valuemap>
+    <value type="QString" key="id">CraneTest.OPC-UA-Server.SignalTimeoutTimer</value>
+   </valuemap>
+   <valuemap type="QVariantMap">
+    <valuemap type="QVariantMap" key="data">
+     <valuelist type="QVariantList" key="nodes"/>
+     <valuemap type="QVariantMap" key="settings">
+      <value type="bool" key="autoLayoutEnabled">true</value>
+     </valuemap>
+    </valuemap>
+    <value type="QString" key="id">CraneTest.OPC-UA-Server.Crane.SetBoomAngle</value>
+   </valuemap>
+   <valuemap type="QVariantMap">
+    <valuemap type="QVariantMap" key="data">
+     <valuelist type="QVariantList" key="nodes">
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">CraneTest.SineNodeType.ComponentDataType.InternalDataDirection.TwoWay</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">0</value>
+        <value type="qlonglong" key="y">423</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">CraneTest.OPC-UA-Server.Crane.BoomAngleNodeType.ComponentDataType.InternalDataDirection.Source</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">-161</value>
+        <value type="qlonglong" key="y">50</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">CraneTest.OPC-UA-Server.Crane.SetSlewAngleNodeType.ComponentDataType.InternalDataDirection.Source</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">-180</value>
+        <value type="qlonglong" key="y">89</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">CraneTest.OPC-UA-Server.Crane.SetTelescopeExtensionNodeType.ComponentDataType.InternalDataDirection.Source</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">-255</value>
+        <value type="qlonglong" key="y">89</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">CraneTest.OPC-UA-Server.Crane.SlewAngleNodeType.ComponentDataType.InternalDataDirection.Source</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">-153</value>
+        <value type="qlonglong" key="y">89</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">CraneTest.OPC-UA-Server.Crane.TelescopeExtensionNodeType.ComponentDataType.InternalDataDirection.Source</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">-228</value>
+        <value type="qlonglong" key="y">128</value>
+       </valuemap>
+      </valuemap>
+     </valuelist>
+     <valuemap type="QVariantMap" key="settings">
+      <valuelist type="QVariantList" key="BlockDiagram/ViewMatrix">
+       <value type="double">0.4816666666666667</value>
+       <value type="qlonglong">0</value>
+       <value type="qlonglong">0</value>
+       <value type="qlonglong">0</value>
+       <value type="double">0.4816666666666667</value>
+       <value type="qlonglong">0</value>
+       <value type="qlonglong">0</value>
+       <value type="qlonglong">0</value>
+       <value type="qlonglong">1</value>
+      </valuelist>
+      <valuelist type="QVariantList" key="BlockDiagram/ViewRect">
+       <value type="qlonglong">-536</value>
+       <value type="qlonglong">4</value>
+       <value type="qlonglong">1038</value>
+       <value type="qlonglong">608</value>
+      </valuelist>
+      <value type="bool" key="autoLayoutEnabled">true</value>
+     </valuemap>
+    </valuemap>
+    <value type="QString" key="id">CraneTest.OPC-UA-Server.Crane</value>
+   </valuemap>
+   <valuemap type="QVariantMap">
+    <valuemap type="QVariantMap" key="data">
+     <valuelist type="QVariantList" key="nodes"/>
+     <valuemap type="QVariantMap" key="settings">
+      <value type="bool" key="autoLayoutEnabled">true</value>
+     </valuemap>
+    </valuemap>
+    <value type="QString" key="id">CraneTest.InvalidLicense</value>
+   </valuemap>
+   <valuemap type="QVariantMap">
+    <valuemap type="QVariantMap" key="data">
+     <valuelist type="QVariantList" key="nodes">
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">CraneTest.ASin.OutNodeType.ComponentDataType.InternalDataDirection.Sink</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">800</value>
+        <value type="qlonglong" key="y">50</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">CraneTest.ASin.InNodeType.ComponentDataType.InternalDataDirection.Source</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">-82</value>
+        <value type="qlonglong" key="y">50</value>
+       </valuemap>
+      </valuemap>
+     </valuelist>
+     <valuemap type="QVariantMap" key="settings">
+      <valuelist type="QVariantList" key="BlockDiagram/ViewMatrix">
+       <value type="double">0.5061224489795918</value>
+       <value type="qlonglong">0</value>
+       <value type="qlonglong">0</value>
+       <value type="qlonglong">0</value>
+       <value type="double">0.5061224489795918</value>
+       <value type="qlonglong">0</value>
+       <value type="qlonglong">0</value>
+       <value type="qlonglong">0</value>
+       <value type="qlonglong">1</value>
+      </valuelist>
+      <valuelist type="QVariantList" key="BlockDiagram/ViewRect">
+       <value type="qlonglong">-121</value>
+       <value type="qlonglong">-227</value>
+       <value type="qlonglong">988</value>
+       <value type="qlonglong">579</value>
+      </valuelist>
+      <value type="bool" key="autoLayoutEnabled">true</value>
+     </valuemap>
+    </valuemap>
+    <value type="QString" key="id">CraneTest.ASin</value>
+   </valuemap>
+  </valuelist>
+ </data>
+ <data>
+  <variable>Configurator.WatchWindow</variable>
+  <valuelist type="QVariantList">
+   <valuemap type="QVariantMap">
+    <value type="QString" key="alias"></value>
+    <value type="QString" key="uri">CraneTest.OPC-UA-Server.Crane.BoomAngle</value>
+   </valuemap>
+  </valuelist>
+ </data>
+ <data>
+  <variable>RemoteNetworks</variable>
+  <valuemap type="QVariantMap">
+   <valuemap type="QVariantMap" key="NetworkList"/>
+  </valuemap>
+ </data>
+ <data>
+  <variable>Table Editor</variable>
+  <valuemap type="QVariantMap">
+   <valuemap type="QVariantMap" key="AlarmsCDPAlarm">
+    <value type="bool" key="Collapsed">false</value>
+    <value type="bool" key="FullyExpanded">false</value>
+    <valuemap type="QVariantMap" key="Heights"/>
+    <value type="QByteArray" key="HorizontalHeader">000000ff0000000000000001000000010000000000000000000000000000000022010000000000000001000000000000006400000ce40000002201010001000000000000000000000000640000001a000000810000000000000022000000000000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000003e8000000006400000000</value>
+   </valuemap>
+   <valuemap type="QVariantMap" key="AllowedClientOPC-UA-IO.AllowedClient">
+    <value type="bool" key="Collapsed">false</value>
+    <value type="bool" key="FullyExpanded">false</value>
+    <valuemap type="QVariantMap" key="Heights"/>
+    <value type="QByteArray" key="HorizontalHeader">000000ff000000000000000100000001000000000000000000000000000000000701000000010000000000000064000002dc0000000701010001000000000000000000000000640000001a000000810000000000000007000000000000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000e80000000100000000000003e8000000006400000000</value>
+   </valuemap>
+   <valuemap type="QVariantMap" key="ArgumentMessagesMessageArgument">
+    <value type="bool" key="Collapsed">false</value>
+    <value type="bool" key="FullyExpanded">false</value>
+    <valuemap type="QVariantMap" key="Heights"/>
+    <value type="QByteArray" key="HorizontalHeader">000000ff00000000000000010000000100000000000000000000000000000000090100000000010000000000000064000003200000000901010001000000000000000000000000640000001a000000810000000000000009000000000000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000003e8000000006400000000</value>
+   </valuemap>
+   <valuemap type="QVariantMap" key="ConnectorsCDPConnector">
+    <value type="bool" key="Collapsed">false</value>
+    <value type="bool" key="FullyExpanded">false</value>
+    <valuemap type="QVariantMap" key="Heights"/>
+    <value type="QByteArray" key="HorizontalHeader">000000ff0000000000000001000000010000000000000000000000000000000004010000000100000000000000640000012c0000000401010001000000000000000000000000640000001a000000810000000000000004000000000000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000003e8000000006400000000</value>
+   </valuemap>
+   <valuemap type="QVariantMap" key="CustomNamespaceOPC-UA-IO.CustomNamespace">
+    <value type="bool" key="Collapsed">false</value>
+    <value type="bool" key="FullyExpanded">false</value>
+    <valuemap type="QVariantMap" key="Heights"/>
+    <value type="QByteArray" key="HorizontalHeader">000000ff000000000000000100000001000000000000000000000000000000000501000000010000000000000064000002dc0000000501010001000000000000000000000000640000001a000000810000000000000005000000000000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000001b00000000100000000000003e8000000006400000000</value>
+   </valuemap>
+   <valuemap type="QVariantMap" key="DocumentsDocument">
+    <value type="bool" key="Collapsed">false</value>
+    <value type="bool" key="FullyExpanded">false</value>
+    <valuemap type="QVariantMap" key="Heights"/>
+    <value type="QByteArray" key="HorizontalHeader">000000ff000000000000000100000001000000000000000000000000000000000301000000010000000000000064000002dc0000000301010001000000000000000000000000640000001a000000810000000000000003000000000000000100000000000000640000000100000000000002780000000100000000000003e8000000006400000000</value>
+   </valuemap>
+   <valuemap type="QVariantMap" key="EventsToOPC-UAOPC-UA-IO.EventsToOPC-UA">
+    <value type="bool" key="Collapsed">false</value>
+    <value type="bool" key="FullyExpanded">false</value>
+    <valuemap type="QVariantMap" key="Heights"/>
+    <value type="QByteArray" key="HorizontalHeader">000000ff000000000000000100000001000000000000000000000000000000000801000000010000000000000064000002dc0000000801010001000000000000000000000000640000001a000000810000000000000008000000000000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000840000000100000000000003e8000000006400000000</value>
+   </valuemap>
+   <valuelist type="QVariantList" key="HiddenEditors"/>
+   <valuemap type="QVariantMap" key="MessagesCDPMessage">
+    <value type="bool" key="Collapsed">false</value>
+    <value type="bool" key="FullyExpanded">false</value>
+    <valuemap type="QVariantMap" key="Heights"/>
+    <value type="QByteArray" key="HorizontalHeader">000000ff000000000000000100000001000000000000000000000000000000000501000000010000000000000064000001900000000501010001000000000000000000000000640000001a000000810000000000000005000000000000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000003e8000000006400000000</value>
+   </valuemap>
+   <valuemap type="QVariantMap" key="MethodNodeOPC-UA-IO.ServerMethodNode">
+    <value type="bool" key="Collapsed">false</value>
+    <value type="bool" key="FullyExpanded">false</value>
+    <valuemap type="QVariantMap" key="Heights"/>
+    <value type="QByteArray" key="HorizontalHeader">000000ff000000000000000100000001000000000000000000000000000000000e0100000000010000000000000064000005140000000e01010001000000000000000000000000640000001a00000081000000000000000e000000000000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000003e8000000006400000000</value>
+   </valuemap>
+   <valuemap type="QVariantMap" key="NetworkInterfaceNetworkInterface">
+    <value type="bool" key="Collapsed">false</value>
+    <value type="bool" key="FullyExpanded">false</value>
+    <valuemap type="QVariantMap" key="Heights"/>
+    <value type="QByteArray" key="HorizontalHeader">000000ff000000000000000100000001000000000000000000000000000000000701000000010000000000000064000002dc0000000701010001000000000000000000000000640000001a000000810000000000000007000000000000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000e80000000100000000000003e8000000006400000000</value>
+   </valuemap>
+   <valuemap type="QVariantMap" key="ObjectNodeOPC-UA-IO.ServerObjectNode">
+    <value type="bool" key="Collapsed">false</value>
+    <value type="bool" key="FullyExpanded">false</value>
+    <valuemap type="QVariantMap" key="Heights"/>
+    <value type="QByteArray" key="HorizontalHeader">000000ff00000000000000010000000100000000000000000000000000000000090100000000010000000000000064000003200000000901010001000000000000000000000000640000001a000000810000000000000009000000000000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000003e8000000006400000000</value>
+   </valuemap>
+   <valuemap type="QVariantMap" key="ParametersCDPParameter">
+    <value type="bool" key="Collapsed">false</value>
+    <value type="bool" key="FullyExpanded">false</value>
+    <valuemap type="QVariantMap" key="Heights"/>
+    <value type="QByteArray" key="HorizontalHeader">000000ff000000000000000100000001000000000000000000000000000000000d0100000000010000000000000064000004b00000000d01010001000000000000000000000000640000001a00000081000000000000000d000000000000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000003e8000000006400000000</value>
+   </valuemap>
+   <valuemap type="QVariantMap" key="PortsCDPPortBase">
+    <value type="bool" key="Collapsed">false</value>
+    <value type="bool" key="FullyExpanded">false</value>
+    <valuemap type="QVariantMap" key="Heights"/>
+    <value type="QByteArray" key="HorizontalHeader">000000ff000000000000000100000001000000000000000000000000000000000801000000010000000000000064000002dc0000000801010001000000000000000000000000640000001a000000810000000000000008000000000000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000840000000100000000000003e8000000006400000000</value>
+   </valuemap>
+   <valuemap type="QVariantMap" key="PropertiesCDPProperty">
+    <value type="bool" key="Collapsed">false</value>
+    <value type="bool" key="FullyExpanded">false</value>
+    <valuemap type="QVariantMap" key="Heights"/>
+    <value type="QByteArray" key="HorizontalHeader">000000ff000000000000000100000001000000000000000000000000000000000c01000000000100000000000000640000044c0000000c01010001000000000000000000000000640000001a00000081000000000000000c000000000000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000003e8000000006400000000</value>
+   </valuemap>
+   <valuemap type="QVariantMap" key="SettingsCDPSetting">
+    <value type="bool" key="Collapsed">false</value>
+    <value type="bool" key="FullyExpanded">false</value>
+    <valuemap type="QVariantMap" key="Heights"/>
+    <value type="QByteArray" key="HorizontalHeader">000000ff0000000000000001000000010000000000000000000000000000000003010000000100000000000000640000011e0000000301010001000000000000000000000000640000001a000000810000000000000003000000000000000100000000000000640000000100000000000000ba0000000100000000000003e8000000006400000000</value>
+   </valuemap>
+   <valuemap type="QVariantMap" key="SignalsCDPSignal">
+    <value type="bool" key="Collapsed">false</value>
+    <value type="bool" key="FullyExpanded">false</value>
+    <valuemap type="QVariantMap" key="Heights"/>
+    <value type="QByteArray" key="HorizontalHeader">000000ff000000000000000100000001000000000000000000000000000000000d0100000000010000000000000064000004b00000000d01010001000000000000000000000000640000001a00000081000000000000000d000000000000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000003e8000000006400000000</value>
+   </valuemap>
+   <valuemap type="QVariantMap" key="StateTransitionsCDPStateTransition">
+    <value type="bool" key="Collapsed">false</value>
+    <value type="bool" key="FullyExpanded">false</value>
+    <valuemap type="QVariantMap" key="Heights"/>
+    <value type="QByteArray" key="HorizontalHeader">000000ff0000000000000001000000010000000000000000000000000000000004010000000100000000000000640000012c0000000401010001000000000000000000000000640000001a000000810000000000000004000000000000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000003e8000000006400000000</value>
+   </valuemap>
+   <valuemap type="QVariantMap" key="StatesCDPState">
+    <value type="bool" key="Collapsed">false</value>
+    <value type="bool" key="FullyExpanded">false</value>
+    <valuemap type="QVariantMap" key="Heights"/>
+    <value type="QByteArray" key="HorizontalHeader">000000ff0000000000000001000000010000000000000000000000000000000002010000000100000000000000640000011e0000000201010001000000000000000000000000640000001a0000008100000000000000020000000000000001000000000000011e0000000100000000000003e8000000006400000000</value>
+   </valuemap>
+   <valuemap type="QVariantMap" key="Subcomponents">
+    <value type="bool" key="Collapsed">false</value>
+    <value type="bool" key="FullyExpanded">false</value>
+    <valuemap type="QVariantMap" key="Heights"/>
+    <value type="QByteArray" key="HorizontalHeader">000000ff000000000000000100000001000000000000000000000000000000000101000000010000000000000064000000000000000101010001000000000000000000000000640000001a000000810000000000000001000000000000000100000000000003e800ffffffff00000000</value>
+   </valuemap>
+   <valuemap type="QVariantMap" key="SubcomponentsCDPComponent">
+    <value type="bool" key="Collapsed">false</value>
+    <value type="bool" key="FullyExpanded">false</value>
+    <valuemap type="QVariantMap" key="Heights"/>
+    <value type="QByteArray" key="HorizontalHeader">000000ff000000000000000100000001000000000000000000000000000000000601000000010000000000000064000002dc0000000601010001000000000000000000000000640000001a0000008100000000000000060000000000000001000000000000006400000001000000000000006400000001000000000000006400000001000000000000006400000001000000000000014c0000000100000000000003e8000000006400000000</value>
+   </valuemap>
+   <valuemap type="QVariantMap" key="TagsCDPTag">
+    <value type="bool" key="Collapsed">false</value>
+    <value type="bool" key="FullyExpanded">false</value>
+    <valuemap type="QVariantMap" key="Heights"/>
+    <value type="QByteArray" key="HorizontalHeader">000000ff000000000000000100000001000000000000000000000000000000000501000000010000000000000064000002dc0000000501010001000000000000000000000000640000001a000000810000000000000005000000000000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000001b00000000100000000000003e8000000006400000000</value>
+   </valuemap>
+   <valuemap type="QVariantMap" key="TimersCDPBaseTimer">
+    <value type="bool" key="Collapsed">false</value>
+    <value type="bool" key="FullyExpanded">false</value>
+    <valuemap type="QVariantMap" key="Heights"/>
+    <value type="QByteArray" key="HorizontalHeader">000000ff0000000000000001000000010000000000000000000000000000000013010000000000010000000000000064000007080000001301010001000000000000000000000000640000001a000000810000000000000013000000000000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000003e8000000006400000000</value>
+   </valuemap>
+   <valuemap type="QVariantMap" key="Unknown">
+    <value type="bool" key="Collapsed">false</value>
+    <value type="bool" key="FullyExpanded">false</value>
+    <valuemap type="QVariantMap" key="Heights"/>
+    <value type="QByteArray" key="HorizontalHeader">000000ff000000000000000100000001000000000000000000000000000000000501000000010000000000000064000001900000000501010001000000000000000000000000640000001a000000810000000000000005000000000000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000003e8000000006400000000</value>
+   </valuemap>
+   <valuemap type="QVariantMap" key="VariableNodeOPC-UA-IO.ServerVariableNodeColumns">
+    <value type="bool" key="Collapsed">false</value>
+    <value type="bool" key="FullyExpanded">false</value>
+    <valuemap type="QVariantMap" key="Heights"/>
+    <value type="QByteArray" key="HorizontalHeader">000000ff0000000000000001000000010000000000000000000000000000000015010000000000010000000000000064000007d00000001501010001000000000000000000000000640000001a000000810000000000000015000000000000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000000640000000100000000000003e8000000006400000000</value>
+   </valuemap>
+  </valuemap>
+ </data>
+</qtcreator>

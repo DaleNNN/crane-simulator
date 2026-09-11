@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Application Name="CraneTest" Model="Application" Description=''>
+  <ApplicationHandle>1</ApplicationHandle>
+  <fs>10</fs>
+  <ClockSync>None</ClockSync>
+  <IsTimeServer>0</IsTimeServer>
+  <OSTimeInterval>120</OSTimeInterval>
+  <CDPVersion>5.1</CDPVersion>
+  <Domain>OPCUAtest</Domain>
+
+  <NetworkInterface Name="ETH0" MAC="" IPAddress="127.0.0.1" SubnetMask="255.255.255.255"></NetworkInterface>
+
+  <Subcomponents>
+    <Subcomponent Name="CDP"        Model="CDP"        src="Components\CDP.xml"></Subcomponent>
+    <Subcomponent Model="OPC-UA-IO.OPC-UA-Server" Name="OPC-UA-Server" src="Components/OPC-UA-Server.xml"></Subcomponent>
+    <Subcomponent Model="Sine" Name="Sine" src="Components/Sine.xml"></Subcomponent>
+  </Subcomponents>
+
+  <Signals>
+    <Signal Name='Process Timer'    Model="CDPSignal&lt;double&gt;" Type='double' Unit='s/s'    Description='Process run time each s.' ></Signal>
+    <Signal Name='Process Period'   Model="CDPSignal&lt;double&gt;" Type='double' Unit='s'      Description='Process interval [s].' ></Signal>
+    <Signal Name="CPULoad"          Model="CDPSignal&lt;double&gt;" Type="double" Unit="0..1"   Description="CPU load [busy/idle, 0..1]."></Signal>
+    <Signal Name="MemUsed"          Model="CDPSignal&lt;double&gt;" Type="double" Unit="KiB"    Description="Memory used [KiB]."></Signal>
+    <Signal Name="MemUsedRelative"  Model="CDPSignal&lt;double&gt;" Type="double" Unit="0..1"   Description="Memory used relative [used/total, 0..1]."></Signal>
+    <Signal Name="MemTotal"         Model="CDPSignal&lt;double&gt;" Type="double" Unit="KiB"    Description="Memory total [KiB]."></Signal>
+    <Signal Name="MemBuffCache"     Model="CDPSignal&lt;double&gt;" Type="double" Unit="KiB"    Description="Memory in buffers and cache [KiB] (only relevant if Linux)."></Signal>
+    <Signal Description="This should be set to 1 when you want Application statemachine to go from PreOperational to Running (for example; I/O Servers have correct NumberOfNodesOnline, etc)" Input="0" Model="CDPSignal&lt;bool&gt;" Name="SafeToStart" Type="bool" Unit="0/1" Value="1"></Signal>
+    <Signal Description="This is set to 1 when the the following conditions are true: The subsystem is up, StartupFlagsState == StartupWaitFlags, and SafeToStart is 1." Input="1" Model="CDPSignal&lt;bool&gt;" Name="BootupDone" Type="bool" Unit="0/1"></Signal>
+  </Signals>
+
+  <Alarms>
+    <Alarm Name='Disk Alarm'            Level='Error'   Enabled='1' Trig='1'  Text='No disk-write problem detected.' Description='This alarm is set when something is wrong with the disk or files on the disk.'></Alarm>
+    <Alarm Name="InvalidLicense"        Level="Error" Enabled="1"   Text="Invalid or missing feature license detected."></Alarm>
+    <Alarm Name='Component Suspended'   Level='Warning' Enabled='1' Trig='0'  Text='Component was suspended!' Description='The component was suspended!' ></Alarm>
+    <Alarm Description="Alarm is triggered (with Text containing the list of errors) when some node of the component (like operator) has configuration fault." Level="Error" Name="ConfigurationFaults"></Alarm>
+    <Alarm Description="Configuration save period timed out. The configuration saving has been forcibly enabled, even though DelayConfigurationSave is true.
+    Consider increasing MaxConfigurationSaveDelay." Level="Error" Name="DelayConfigurationSaveAborted" Text="Configuration file write was re-enabled (DelayConfigurationSave overridden)" Trig="1"></Alarm>
+    <Alarm Level="Error" Name="UnhandledExceptionDetected" Text="No unhandled C++ exceptions have been detected" Trig="1"></Alarm>
+    <Alarm Description="This alarm is set when controller clock is not monotonic (steady). The alarm can indicate that PTP time-sync is not configured or working properly or not running on PTP-supported hardware." Level="Error" Name="NonMonotonicClockDetected" Text="Non-monotonic clock detected. Steady processes scheduling is not possible." Trig="1"></Alarm>
+    <Alarm Description="This alarm is set when StartupChecks==1 and the application times out waiting for the conditions it requires to go to Running state." Level="Error" Name="StartupOverrideAlarm" Text="Application startup overridden due to timeout or internal checks being skipped." Trig="1"></Alarm>
+  </Alarms>
+
+  <Parameters>
+    <Parameter Description="The maximum amount of time that DelayConfigurationSave can block the configuration saving. If DelayConfigurationSave
+    is active for longer than this time, configuration saving will be allowed again, and the DelayConfigurationSaveAborted alarm will trigger." Name="MaxConfigurationSaveDelay" PreviousValue="600" Unit="s" Value="600"></Parameter>
+    <Parameter Description="If application is not in Running state within this timeout, it overrides the startup-wait sequence and forces the Application to Running state. See also &apos;SafeToStart&apos; and &apos;StartupChecks&apos;." Name="StartupOverrideTime" Value="5"></Parameter></Parameters>
+  
+
+</Application>

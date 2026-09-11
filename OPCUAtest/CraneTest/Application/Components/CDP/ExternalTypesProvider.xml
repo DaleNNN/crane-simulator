@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Component Model="ExternalTypes.Provider" Name="ExternalTypesProvider" src="Components/CDP/ExternalTypesProvider.xml">
+  <ExternalType Model="ExternalTypes.EncryptedXMLConf" Name="EncryptedXMLConf"></ExternalType>
+  <ExternalType Model="ExternalTypes.SQLiteValue" Name="SQLiteValue"></ExternalType>
+
+
+  <Signals>
+    <Signal Description="Process run time each s." Input="0" Model="CDPSignal&lt;double&gt;" Name="Process Timer" Type="double" Unit="s/s"></Signal>
+    <Signal Description="Process interval [s]." Input="0" Model="CDPSignal&lt;double&gt;" Name="Process Period" Type="double" Unit="s"></Signal>
+  </Signals>
+
+  <Alarms>
+    <Alarm Description="A component was suspended!" Name="Component Suspended" Text="Component was suspended!"></Alarm>
+    <Alarm Description="Alarm is triggered (with Text containing the list of errors) when some node of the component (like operator) has configuration fault." Level="Error" Name="ConfigurationFaults"></Alarm>
+    <Alarm Description="Triggered when any of the ExternalType handlers encounters an error with their requests to external data." Level="Error" Name="HandlerError"></Alarm>
+  </Alarms></Component>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Component Name="Security" Model="Security" Description="Handles CDP security configuration" RolePermissions="SecurityAdmin=*;All=BR;EndUserAdmin=BRC" Activate="1" Timestamp="0">
+  <fs>1</fs>
+  <Roles>
+    <Role Name="ConfigureAdmin" Timestamp="0" RolePermissions="All=;ConfigureAdmin=BR;SecurityAdmin=*">
+      <DefaultPermissions>BRWC</DefaultPermissions>
+      <Description>By default allows to view, change and add/remove everything but permissions</Description>
+    </Role>
+    <Role Name="SecurityAdmin" Timestamp="0" RolePermissions="All=;ConfigureAdmin=BR;SecurityAdmin=*">
+      <DefaultPermissions>BP</DefaultPermissions>
+      <Description>By default allows to change only permissions</Description>
+    </Role>
+    <Role Name="Operator" Timestamp="0" RolePermissions="EndUserAdmin=BRC">
+      <DefaultPermissions>BRW</DefaultPermissions>
+      <Description>By default allows to view and change everything (but no add/remove)</Description>
+    </Role>
+    <Role Name="Observer" Timestamp="0" RolePermissions="EndUserAdmin=BRC">
+      <DefaultPermissions>BR</DefaultPermissions>
+      <Description>By default allows to view everything</Description>
+    </Role>
+    <Role Name="EndUserAdmin" Timestamp="0" RolePermissions="EndUserAdmin=BRC">
+      <DefaultPermissions>BP</DefaultPermissions>
+      <Description>Intended to manage (including add/remove) all users except system users (those having ConfigureAdmin or SecurityAdmin role)</Description>
+    </Role>
+  </Roles>
+  <AuthMethods>
+    <AuthMethod Name="Password" Model="PasswordAuthentication" Timestamp="0">
+      <Prompt>Log in using username and password</Prompt>
+      <Disabled>0</Disabled>
+      <DisabledForUsers></DisabledForUsers>
+      <WhitelistedForUsers></WhitelistedForUsers>
+    </AuthMethod>
+  </AuthMethods>
+
+  <Signals>
+    <Signal Description="Process run time each s." Input="0" Model="CDPSignal&lt;double&gt;" Name="Process Timer" Type="double" Unit="s/s"></Signal>
+    <Signal Description="Process interval [s]." Input="0" Model="CDPSignal&lt;double&gt;" Name="Process Period" Type="double" Unit="s"></Signal>
+  </Signals>
+
+  <Alarms>
+    <Alarm Description="A component was suspended!" Name="Component Suspended" Text="Component was suspended!"></Alarm>
+    <Alarm Description="Alarm is triggered (with Text containing the list of errors) when some node of the component (like operator) has configuration fault." Level="Error" Name="ConfigurationFaults"></Alarm>
+    <Alarm Description="Audit log failure experienced" Name="AuditLogFailure" Text="Audit log failure experienced" Trig="1"></Alarm>
+  </Alarms>
+</Component>

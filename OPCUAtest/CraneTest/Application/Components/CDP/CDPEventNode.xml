@@ -1,0 +1,36 @@
+<?xml version="1.0" ?>
+
+<Component Name="CDPEventNode" Model="CDPEventNode" Description='Collect events triggered in the application/controller.' Activate="1">
+  <Debug>0</Debug>
+  <fs>10</fs>
+  <MaxEventsToSendAtStartup>512</MaxEventsToSendAtStartup>
+
+  <Alarms>
+    <Alarm Name="Component Suspended" Level="Warning" Model="CDPAlarm" Enabled="1"          Text="Component &apos;CDPEventNode&apos; was suspended!" Description="A component was suspended!"></Alarm>
+    <Alarm Name="BufferOverflow"      Level="Warning" Model="CDPAlarm" Enabled="1" Trig="1" Text="Oldest events are lost/overwritten." Description="Oldest events are lost/overwritten."></Alarm>
+    <Alarm Description="Alarm is triggered (with Text containing the list of errors) when some node of the component (like operator) has configuration fault." Level="Error" Name="ConfigurationFaults"></Alarm>
+  </Alarms>
+
+  <Parameters>
+    <Parameter Name="Update period"                Value="1.0"  Unit="s"        Model="CDPParameter" PreviousValue="0.5"
+               Description="Timeout for event Update messages. Assure secure event transmit, even when loss of last message."></Parameter>
+    <Parameter Name="Simple event database size"   Value="5000" Unit="events"   Model="CDPParameter" PreviousValue="1024"></Parameter>
+    <Parameter Name="Extended event database size" Value="5000" Unit="events"   Model="CDPParameter" PreviousValue="1024"></Parameter>
+    <Parameter Name="Max messages per second"      Value="500"  Unit="messages" Model="CDPParameter" PreviousValue="500"
+               Description="The maximum number of messages that can be sent each second."></Parameter>
+    <Parameter Description="Interval between re-reporting alarm events." Name="ReReportAlarmInterval" PreviousValue="15" Unit="s" Value="15"></Parameter>
+  </Parameters>
+
+  <Signals>
+    <Signal Name="Process Timer"            Value="0" Unit="s/s"           Type="double" Input="0" Model="CDPSignal&lt;double&gt;" Description="Process run time each s."></Signal>
+    <Signal Name="Process Period"           Value="0" Unit="s"             Type="double" Input="0" Model="CDPSignal&lt;double&gt;" Description="Process interval [s]."></Signal>
+
+    <Signal Name='SimpleEventDB_bufferload' Value='0' Unit='percent [0-1]' Type='double' Input='0' Model="CDPSignal&lt;double&gt;" Description='Simple event DB buffer load.'></Signal>
+    <Signal Name="TimeStampCompensation"    Value="0" Unit="s"             Type="double" Input="1" Model="CDPSignal&lt;double&gt;" Description="Compensate timestamp for Event. Use this value to synchronise TimeStamp to external time reference, e.g. GPS time."></Signal>
+    <Signal Name="CurrentEventId"           Value="0" Unit="num"           Type="double" Input="0" Model="CDPSignal&lt;double&gt;" Description="The number of events triggered on this CDPEventNode."></Signal>
+    <Signal Description="Number of alarms with STATUS_SET" Input="0" Model="CDPSignal&lt;unsigned int&gt;" Name="NumAlarmsSet" Type="unsigned int" Unit="num"></Signal>
+    <Signal Description="Number of alarms with STATUS_UNACK" Input="0" Model="CDPSignal&lt;unsigned int&gt;" Name="NumAlarmsUnack" Type="unsigned int" Unit="num"></Signal>
+    <Signal Description="Number of alarms with both STATUS_UNACK and STATUS_SET" Input="0" Model="CDPSignal&lt;unsigned int&gt;" Name="NumAlarmsUnackSet" Type="unsigned int" Unit="num"></Signal>
+  </Signals>
+
+</Component>

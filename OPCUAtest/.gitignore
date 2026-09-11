@@ -1,0 +1,61 @@
+# ============================================================
+#  CDP Studio
+# ============================================================
+
+# Byggekataloger (CDP/Qt Creator lager disse ved siden av prosjektet)
+build-*/
+build/
+*.build/
+
+# Deploy-output
+deploy/
+bin/
+
+# Brukerspesifikke innstillinger - vindusplassering, siste åpne filer
+# og absolutte stier til din maskin. Skal aldri deles.
+*.user
+*.user.*
+*.autosave
+
+# qmake / make / CMake
+Makefile
+Makefile.*
+.qmake.stash
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+
+# Kompilerte filer
+*.o
+*.obj
+*.so
+*.so.*
+*.a
+*.lib
+*.dll
+*.exe
+*.pdb
+
+# Qt-generert kode (moc/uic/rcc)
+moc_*.cpp
+moc_*.h
+ui_*.h
+qrc_*.cpp
+
+# Logger og kjøretidsfiler
+*.log
+core
+core.*
+
+# OPC UA sertifikatlagre - maskinspesifikke, og private nøkler
+# skal aldri i et repo
+pki/
+**/pki/
+*.pfx
+*.pem
+*.key
+
+# OS
+Thumbs.db
+Desktop.ini
+.DS_Store

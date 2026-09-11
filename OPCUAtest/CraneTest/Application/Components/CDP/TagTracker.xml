@@ -1,0 +1,17 @@
+<Component Model="TagTracker" Name="TagTracker" src="Components/CDP/TagTracker.xml" Description="Tracks all Tags of this local application.">
+  <SchedulingOrder>TopDown</SchedulingOrder>
+  <SchedulingGroup>Default</SchedulingGroup>
+  <Priority>low</Priority>
+  <fs>10</fs>
+
+  <Signals>
+    <Signal Description="Process run time each s." Input="0" Model="CDPSignal&lt;double&gt;" Name="Process Timer" Type="double" Unit="s/s"></Signal>
+    <Signal Description="Process interval [s]." Input="0" Model="CDPSignal&lt;double&gt;" Name="Process Period" Type="double" Unit="s"></Signal>
+  </Signals>
+
+  <Alarms>
+    <Alarm Description="A component was suspended!" Name="Component Suspended" Text="Component &apos;TagTracker&apos; was suspended!"></Alarm>
+    <Alarm Description="Alarm is triggered (with Text containing the list of errors) when some node of the component (like operator) has configuration fault." Level="Error" Name="ConfigurationFaults"></Alarm>
+  </Alarms>
+  <Debug>0</Debug>
+</Component>

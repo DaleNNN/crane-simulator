@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Default Messenger CDP system component. -->
+<Component Name="Messenger" Model="Messenger" Description='Handles communication between CDP objects, components and applications.' Activate="1">
+  <fs>10</fs>
+  <DisconnectTimeout>1.4</DisconnectTimeout>
+  <AppNotifySendInterval>0.6</AppNotifySendInterval>
+
+  <Signals>
+    <Signal Name="Process Timer"          Value="0" Unit="s/s"   Type="double" Input="0" Model="CDPSignal&lt;double&gt;" Description="Process run time each s."></Signal>
+    <Signal Name="Process Period"         Value="0" Unit="s"     Type="double" Input="0" Model="CDPSignal&lt;double&gt;" Description="Process interval [s]."></Signal>
+
+    <Signal Name="TotalSendMessageRate"   Value="0" Unit="1/s"   Type="double" Input="0" Model="CDPSignal&lt;double&gt;" Description="Total messages sent each s."></Signal>
+    <Signal Name="UDPNetworkLoad"         Value="0" Unit="kB/s"  Type="double" Input="0" Model="CDPSignal&lt;double&gt;" Description="Messenger network load, sum of in and out."></Signal>
+    <Signal Name="UDPMessageRateOut"      Value="0" Unit="1/s"   Type="double" Input="0" Model="CDPSignal&lt;double&gt;" Description="UDP messages sent each s."></Signal>
+    <Signal Name="UDPMessageRateIn"       Value="0" Unit="1/s"   Type="double" Input="0" Model="CDPSignal&lt;double&gt;" Description="UDP messages received each s."></Signal>
+    <Signal Name="UDPHighSendBufferTop"   Value="1" Unit="Count" Type="double" Input="0" Model="CDPSignal&lt;double&gt;" Description="UDP message buffer top, high priority."></Signal>
+    <Signal Name="UDPSendFailures"        Value="0" Unit="1/min" Type="double" Input="0" Model="CDPSignal&lt;double&gt;" Description="UDP message send failures last minute."></Signal>
+    <Signal Name="UDPSendRetryCount"      Value="0" Unit="1/min" Type="double" Input="0" Model="CDPSignal&lt;double&gt;" Description="UDP message send retry count last minute."></Signal>
+    <Signal Name="UDPSendBlockingTime"    Value="0" Unit="s"     Type="double" Input="0" Model="CDPSignal&lt;double&gt;" Description="Max UDP send block time (application debug level must be at least 1 to be measured)."></Signal>
+    <Signal Name="UDPSendMaxBlockingTime" Value="0" Unit="s"     Type="double" Input="0" Model="CDPSignal&lt;double&gt;" Description="Filtered max UDP send block time (application debug level must be at least 1 to be measured)."></Signal>
+ </Signals>
+
+  <Parameters>
+    <Parameter Name="kMonitorFilter"      Value="1" Unit="0..1"  Model="CDPParameter" PreviousValue="0.2" TimeLastChanged="0" Description="IIR filter constant 0..1 for monitor signal filtering. 1 == filter disabled."></Parameter>
+    <Parameter Name="Max retry count"     Value="3" Unit="Count" Model="CDPParameter" PreviousValue="3"   TimeLastChanged="0" Description="Maximum UDP send retry count for a message."></Parameter>
+    <Parameter Name="Network disabled"    Value="0" Unit="Bool"  Model="CDPParameter" PreviousValue="0"   TimeLastChanged="0" Description="Set == 1 to disable messenger network send and isolate this application from the network."></Parameter>
+  </Parameters>
+  
+  <Alarms>
+    <Alarm Name="Component Suspended" Level="Warning" Model="CDPAlarm" Enabled="1" Text="Component &apos;Messenger&apos; was suspended!" Description="A component was suspended!"></Alarm>
+    <Alarm Description="Alarm is triggered (with Text containing the list of errors) when some node of the component (like operator) has configuration fault." Level="Error" Name="ConfigurationFaults"></Alarm>
+    <Alarm Description="Local Message queue for Process &apos;%s&apos; is full" Level="Error" Name="LocalMessageQueueFull" Text="Queue state OK"></Alarm>
+  </Alarms>
+
+  <Timers>
+    <Timer Name="TimerInitTimeout"            Model="CDPTimerMs" Description="Timer used for state-transition from Init to Running."></Timer>
+    <Timer Name="TimerSendNotify"             Model="CDPTimerMs" Description="Timer used to decide how often to send notify messages."></Timer>
+    <Timer Name="StatisticsSignalsUpdateRate" Model="CDPTimerMs" Description="Timer used to decide how often to update statistics signals."></Timer>
+    <Timer Name="FailureSignalsUpdateRate"    Model="CDPTimerMs" Description="Timer used to decide how often to update failure signals."></Timer>
+  </Timers>
+
+</Component>

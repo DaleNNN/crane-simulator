@@ -1,0 +1,17 @@
+<Component Model='RoutingTracker' Name='RoutingTracker' src='Components/CDP/RoutingTracker.xml' Description="Tracks all Routings of this local application.">
+  <SchedulingOrder>TopDown</SchedulingOrder>
+  <SchedulingGroup>Default</SchedulingGroup>
+  <Priority>low</Priority>
+  <fs>1</fs>
+
+  <Signals>
+    <Signal Description="Process run time each s." Input="0" Model="CDPSignal&lt;double&gt;" Name="Process Timer" Type="double" Unit="s/s"></Signal>
+    <Signal Description="Process interval [s]." Input="0" Model="CDPSignal&lt;double&gt;" Name="Process Period" Type="double" Unit="s"></Signal>
+  </Signals>
+
+  <Alarms>
+    <Alarm Description="A component was suspended!" Name="Component Suspended" Text="Component &apos;RoutingTracker&apos; was suspended!"></Alarm>
+    <Alarm Description="Notifies if application contains any invalid routings." Name="Broken Routing(s)" Text="No broken routings detected" Timeout="7"></Alarm>
+    <Alarm Description="Alarm is triggered (with Text containing the list of errors) when some node of the component (like operator) has configuration fault." Level="Error" Name="ConfigurationFaults"></Alarm>
+  </Alarms>
+</Component>

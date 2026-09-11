@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Component Name="CDPEventSubscriber" Model="EventSubscr" Description='Subscribes to event providers. Can subscribe to different providers, such as CDPEventNodes and CDPEventLoggers.' Activate="1">
+  <fs>10</fs>
+  <InitialState></InitialState>
+
+  <EventProviders>
+    <!-- A list of components (CDPEventNode/CDPEventLogger) providing events. -->
+    <EventProvider Name="Provider1" Routing="..CDPEventNode"></EventProvider>
+  </EventProviders>
+
+  <Subscriptions>
+    <Subscription Name="Subscription1" Timeout="30">
+      <Group Name="GroupItem1" GroupName="All" Events="Set"></Group>
+      <Group Name="GroupItem2" GroupName="All" Events="Clear"></Group>
+      <Group Name="GroupItem3" GroupName="All" Events="Ack"></Group>
+    </Subscription>
+  </Subscriptions>
+
+  <Signals>
+    <Signal Name="Process Timer"  Value="0" Unit="s/s" Type="double" Input="0" Model="CDPSignal&lt;double&gt;" Description="Process run time each s."></Signal>
+    <Signal Name="Process Period" Value="0" Unit="s"   Type="double" Input="0" Model="CDPSignal&lt;double&gt;" Description="Process interval [s]."></Signal>
+  </Signals>
+
+  <Alarms>
+    <Alarm Name="Component Suspended" Level="Warning" Model="CDPAlarm" Enabled="1" Text="Component &apos;CDPEventSubscriber&apos; was suspended!" Description="A component was suspended!"></Alarm>
+    <Alarm Description="Alarm is triggered (with Text containing the list of errors) when some node of the component (like operator) has configuration fault." Level="Error" Name="ConfigurationFaults"></Alarm>
+  </Alarms>
+
+  <Parameters>
+    <Parameter Name="Simple event database size"   Value="5000" Unit="events" Model="CDPParameter" PreviousValue="1024"></Parameter>
+    <Parameter Name="Extended event database size" Value="5000" Unit="events" Model="CDPParameter" PreviousValue="1024"></Parameter>
+    <Parameter Name="ExtendedUpdateRequestPeriod"  Value="10"   Unit="s"      Model="CDPParameter" PreviousValue="10"
+               Description="Cyclic periodic time to retrieve extended information if the information does not already exist in local DB."></Parameter>
+    <Parameter Name="SubscriptConfirmationPeriod"  Value="1"    Unit="s"      Model="CDPParameter" PreviousValue="1"
+               Description="Cyclic periodic time to resend subscription request to former unconfirmed subscriptions requests."></Parameter>
+    <Parameter Name="SubscriptionUpdatePeriod"     Value="10"   Unit="s"      Model="CDPParameter" PreviousValue="10"
+               Description="Cyclic periodic time to send subscription request to configured providers. (refresh of subscription)"></Parameter>
+    <Parameter Name="Log events to file"           Value="0"    Unit=""       Model="CDPParameter" PreviousValue="0"
+               Description="Specifies whether events should be logged to file."></Parameter>
+    <Parameter Name="MaxHistoryEventListSize"      Value="1000" Unit="events" Model="CDPParameter" PreviousValue="1000"
+	           Description="Specifies the max size of the History Event List. The oldest events are removed if limit is reached."></Parameter>
+  </Parameters>
+
+  <Timers>
+    <Timer Name="ExtendedUpdateRequestPeriodTimer" Model="CDPParameterTimerMs" Description="Timer used to retrieve extended information. Period is configured in Parameter ExtendedUpdateRequestPeriod."></Timer>
+    <Timer Name="SubscriptConfirmationPeriodTimer" Model="CDPParameterTimerMs" Description="Timer used to resend subscription request to former unconfirmed subscriptions requests. Period is configured in Parameter SubscriptConfirmationPeriod."></Timer>
+    <Timer Name="SubscriptionUpdatePeriodTimer"    Model="CDPParameterTimerMs" Description="Timer used to send subscription request to configured providers. Period is configured in Parameter SubscriptionUpdatePeriod."></Timer>
+  </Timers>
+
+</Component>

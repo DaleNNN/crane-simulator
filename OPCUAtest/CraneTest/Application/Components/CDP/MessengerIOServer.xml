@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Component Name="MessengerIOServer" Model="MessengerIOServer" Description='Transports property and signal values between applications.' Activate="1">
+  <fs>10</fs>
+
+  <Signals>
+    <Signal Name="Process Timer"                Value="0" Unit="s/s" Type="double"       Input="0" Model="CDPSignal&lt;double&gt;"       Description="Process run time each s."></Signal>
+    <Signal Name="Process Period"               Value="0" Unit="s"   Type="double"       Input="0" Model="CDPSignal&lt;double&gt;"       Description="Process interval [s]."></Signal>
+
+    <Signal Name="outputDisabled"               Value="0"            Type="bool"         Input="0" Model="CDPSignal&lt;bool&gt;"         Description="[Disabled] Set to true when output is disabled."></Signal>
+    <Signal Name="Send-Receive Roundtrip time"	Value="0"            Type="double"       Input="0" Model="CDPSignal&lt;double&gt;"       Description="[Disabled] Time to send and receive IOServer packets."></Signal>
+    <Signal Name="NumberOfNodes"                Value="0"            Type="unsigned int" Input="0" Model="CDPSignal&lt;unsigned int&gt;" Description="[Disabled] Number of nodes defined in IOServer file."></Signal>
+    <Signal Name="NumberOfNodesOnline"          Value="0"            Type="unsigned int" Input="0" Model="CDPSignal&lt;unsigned int&gt;" Description="[Disabled] Number of nodes currently online."></Signal>
+    <Signal Description="If implemented by specific IOServer the signal can be set true to disable output." Input="1" Model="CDPSignal&lt;bool&gt;" Name="OutputDisable" Type="bool"></Signal>
+  </Signals>
+
+  <Parameters>
+    <Parameter Name="SignalTimeout" Value="1" Unit="s" Model="CDPParameter" PreviousValue="0" TimeLastChanged="Mon Feb 02 14:17:04 2004" Description="Timeout-delay used for the timer SignalTimeoutTimer."></Parameter>
+  </Parameters>
+
+  <Alarms>
+    <Alarm Name="Component Suspended" Level="Warning" Model="CDPAlarm" Enabled="1" Text="Component &apos;MessengerIOServer&apos; was suspended!" Description="A component was suspended!"></Alarm>
+    <Alarm Name="Transmission Error"  Level="Warning" Model="CDPAlarm" Enabled="1" Text="MessengerIOServer transmission-error alarm"             Description="Transmission-error alarm"></Alarm>
+    <Alarm Description="Alarm is triggered (with Text containing the list of errors) when some node of the component (like operator) has configuration fault." Level="Error" Name="ConfigurationFaults"></Alarm>
+  </Alarms>
+
+  <IOConfig></IOConfig>
+  
+
+  <Timers>
+    <Timer Name="SignalTimeoutTimer" Model="CDPParameterTimer" Description="Timer used to delay setting Transmission Error alarm. Timeout-delay is configured in Parameter SignalTimeout."></Timer>
+  </Timers>
+
+</Component>

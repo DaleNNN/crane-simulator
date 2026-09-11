@@ -1,0 +1,33 @@
+<Component EndpointInterface="" EndpointPort="4840" EndpointProtocol="opc.tcp" Model="OPC-UA-IO.OPC-UA-Server" Name="OPC-UA-Server" SecurityMode="None" SecurityPolicy="Aes256_Sha256_RsaPss" src="Components/OPC-UA-Server.xml" Description="CDP module that allows remote clients to connect to running CDP applications via OPC UA protocol">
+  <SchedulingOrder>TopDown</SchedulingOrder>
+  <SchedulingGroup>Default</SchedulingGroup>
+  <fs>5</fs>
+  <Status>0</Status>
+
+  <Signals>
+    <Signal Description="Process run time each s." Input="0" Model="CDPSignal&lt;double&gt;" Name="Process Timer" Type="double" Unit="s/s"></Signal>
+    <Signal Description="Process interval [s]." Input="0" Model="CDPSignal&lt;double&gt;" Name="Process Period" Type="double" Unit="s"></Signal>
+    <Signal Description="If implemented by specific IOServer the signal can be set true to disable output." Input="1" Model="CDPSignal&lt;bool&gt;" Name="OutputDisable" Type="bool"></Signal>
+    <Signal Description="The time needed to perform one send and receive." Input="0" Model="CDPSignal&lt;double&gt;" Name="Send-Receive Roundtrip time" Type="double" Unit="s"></Signal>
+    <Signal Description="Number of items working in ioserver." Input="0" Model="CDPSignal&lt;unsigned int&gt;" Name="NumberOfNodesOnline" Type="unsigned int" Unit="count"></Signal>
+    <Signal Description="Number of items total in ioserver." Input="0" Model="CDPSignal&lt;unsigned int&gt;" Name="NumberOfNodes" Type="unsigned int" Unit="count"></Signal>
+  </Signals>
+
+  <Alarms>
+    <Alarm Description="A component was suspended!" Name="Component Suspended" Text="Component was suspended!"></Alarm>
+    <Alarm Description="Alarm is triggered (with Text containing the list of errors) when some node of the component (like operator) has configuration fault." Level="Error" Name="ConfigurationFaults"></Alarm>
+    <Alarm Description="Transmission-error alarm" Name="Transmission Error" Text="IOServer transmission-error alarm"></Alarm>
+  </Alarms>
+
+  <Parameters>
+    <Parameter Description="Delay before setting Transmission Error alarm." Name="SignalTimeout" PreviousValue="1" TimeLastChanged="0" Unit="s" Value="1"></Parameter>
+  </Parameters>
+
+  <Timers>
+    <Timer Description="Timer used to delay setting Transmission Error alarm. Timeout-delay is configured in Parameter SignalTimeout." Model="CDPParameterTimer" Name="SignalTimeoutTimer"></Timer>
+  </Timers>
+  <ObjectNode Model="OPC-UA-IO.ServerObjectNode" Name="Crane">
+    <VariableNode IdType="Automatic" Input="1" IsProperty="0" Model="OPC-UA-IO.ServerVariableNode&lt;double&gt;" Name="BoomAngle" Type="double" UAType="Double" AccessLevel="125" Value="0" Routing="...Sine.Output"></VariableNode>
+    <VariableNode IdType="Automatic" Input="1" IsProperty="0" Model="OPC-UA-IO.ServerVariableNode&lt;double&gt;" Name="SlewAngle" Type="double" UAType="Double" AccessLevel="125" Value="0"></VariableNode>
+    <VariableNode IdType="Automatic" Input="1" IsProperty="0" Model="OPC-UA-IO.ServerVariableNode&lt;double&gt;" Name="TelescopeExtension" Type="double" UAType="Double" Value="0" AccessLevel="125"></VariableNode></ObjectNode>
+</Component>
